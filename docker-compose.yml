@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  meta-mcp:
+    build: .
+    image: meta-mcp:latest
+    container_name: meta-mcp-server
+    env_file:
+      - .env
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
